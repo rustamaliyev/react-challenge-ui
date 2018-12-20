@@ -14,7 +14,7 @@
             </div>
             <div class="col-8">
                 <div class="menu">
-                    <ul>
+                    <ul class="main-nav" id="js-menu">
                         <li><a href="#" title="Patients">PATIENTS</a></li>
                         <li><a href="#" title="Tasks">TASKS</a></li>
                         <li><a href="#" title="Dashboard">DASHBOARD</a></li>
@@ -30,7 +30,11 @@
         </div>
             
     </div>
+
+ <span class="navbar-toggle" id="js-navbar-toggle"><i class="fas fa-bars"></i></span>
 </nav>
+
+
 <section id= "subheader">
     <div class="container">
         test
@@ -50,5 +54,12 @@
 </footer>
 
 
+<script>
+let mainNav = document.getElementById("js-menu");
+let navBarToggle = document.getElementById("js-navbar-toggle");
 
+navBarToggle.addEventListener("click", function() {
+  mainNav.classList.toggle("active");
+});
+</script>
 {% endblock %}
