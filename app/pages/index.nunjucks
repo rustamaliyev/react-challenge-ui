@@ -1,0 +1,29 @@
+<!-- index.nunjucks -->
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+<nav>
+   
+
+</nav>
+<section id= "subheader">
+    <div class="container">
+        test
+    </div>
+</section>
+
+<section id="main">
+    <div class="container">
+        test
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        test
+    </div>
+</footer>
+
+
+
+{% endblock %}
