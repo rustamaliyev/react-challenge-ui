@@ -3,8 +3,33 @@
 
 {% block content %}
 <nav>
-   
 
+   <div class="container">
+      <div class="flex-grid-thirds">
+            <div class="col-2">
+                <div class="menu-left">
+                    <a href="#"><i class="fas fa-angle-left"></i>  Patients</a>
+                </div>
+                
+            </div>
+            <div class="col-8">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#" title="Patients">PATIENTS</a></li>
+                        <li><a href="#" title="Tasks">TASKS</a></li>
+                        <li><a href="#" title="Dashboard">DASHBOARD</a></li>
+                    </ul>
+                </div>    
+            </div>
+            <div class="col-2">
+                <div class="menu-right">
+                    <img class="profile-pic" src="https://image.flaticon.com/icons/png/128/149/149071.png">    
+                    <a href="#">Test User <i class="fas fa-caret-down"></i></i></a>
+                </div>
+             </div>   
+        </div>
+            
+    </div>
 </nav>
 <section id= "subheader">
     <div class="container">
@@ -20,7 +45,7 @@
 
 <footer>
     <div class="container">
-        test
+        <div class="copyrights">&copy; 2018 SkinIO, LLC</div>
     </div>
 </footer>
 

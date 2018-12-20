@@ -53,7 +53,8 @@ table {
 /**
  * Color Variables to be utilizes throughout the application
  */
- $navy: #303e4e;
+ $navy: #293f4f;
+ $light-navy:#4a5b69;
  $white: #fff;
  $blue: #4489bb;
  $teal: #4eada1;
@@ -70,6 +71,7 @@ table {
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    font-family: 'Montserrat', sans-serif;
   }
 
  .container {
@@ -80,9 +82,64 @@ table {
     margin-left: auto;
 }
 
+/* flexbox model */
+.flexcontainer {
+    display: flex;
+    flex-direction: row;
+ }
+
+ .flex-grid {
+    display: flex;
+  }
+  .flex-grid .col {
+    flex: 1;
+  }
+  .flex-grid-thirds {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .flex-grid-thirds { 
+            .col-8 {
+               
+                width: 80%;
+            }
+            .col-2 {
+              
+                width: 10%;
+            }
+        
+  }
+
+     
+
+  
+  @media (max-width: 400px) {
+    .flex-grid,
+    .flex-grid-thirds {
+      display: block;
+      .col {
+        width: 100%;
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+  
+  
+  *{
+    box-sizing: border-box;
+  }
+  
+  .flex-grid { 
+    margin: 0 0 20px 0;
+  }
+  
+
+/* end flexbox model */
+
  nav {
     width:100%;
-    height:80px;
+    height:81px;
     background: $navy;
     position: relative;
     display: -ms-flexbox;
@@ -93,33 +150,104 @@ table {
     align-items: center;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: .5rem 1rem;
+    
+    
+
+    a{
+        color:$white;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: normal;
+        
+    }
+    .profile-pic {
+        width:25px;
+        margin-right:10px;
+    } 
+
+   .menu-left, .menu-right{
+     height:81px;  
+     padding-top: 1em;
+     padding-bottom: 1em;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
+  
+    .menu { 
+        width: 100%;
+        text-align: center;
+        height:81px;
+        border-left: 1px solid $light-navy;
+        border-right: 1px solid $light-navy;
+        padding-top: 1em;
+	    padding-bottom: 1em;
+        
+       
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        margin:  auto;
+        padding-left: 0;
+
+        li {
+        
+            
+            display: block;
+            text-align: center;
+            text-decoration: none;
+    
+            a{ 
+                font-size:15px;
+                padding:15px;
+                float: left;
+                display: block;
+            }
+
+         }
+      
+       
+      }
+    }
+   
  }
 
  #subheader {
     width:100%;
     height:180px;
     background: $white;
-    border-bottom: 1px solid $dark-grey;
+    border-bottom: 2px solid $dark-grey;
 
  }
 
  #main {
     width:100%;
     background: $grey;
-    border-bottom: 1px solid $dark-grey;
     min-height: 300px;
     flex: 1;
  }
 
  footer {
+    border-top: 2px solid $dark-grey; 
     width:100%;
     height:60px;
     background: $medium-grey;
+    .copyrights {
+        padding-top: 1.7em;
+        padding-bottom: 1.7em;
+        display: flex;
+        align-items: left;
+        justify-content: left;
+        font-size:13px;  
 
+    }
  }
 
+
 /* Responsive styles */
+
 
 @media (min-width: 576px) { 
     .container { 
